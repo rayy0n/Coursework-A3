@@ -25,9 +25,9 @@ loopback_config = [
 
 net_connect.send_config_set(loopback_config)
 
-# Configure GigabitEthernet0/0
+# Configure GigabitEthernet0/1
 interface_config = [
-    'interface GigabitEthernet0/0',
+    'interface GigabitEthernet0/1',
     'ip address 192.168.2.1 255.255.255.0',
     'no shutdown',
     'exit',
