@@ -1,10 +1,12 @@
-
 from netmiko import ConnectHandler
+
+#Computer Network path
+
 
 # Router details
 router = {
-    'Router': 'R1',
-    'ip': '192.168.1.1',  # Replace with your router's IP address
+    'Router': 'csr100v',
+    'ip': '192.168.56.1',  
     'username': 'cisco',
     'password': 'cisco123',
     'secret': 'cisco1234',
@@ -33,7 +35,7 @@ interface_config = [
 
 net_connect.send_config_set(interface_config)
 
-# Configure OSPF
+# Configure OSPF (open shortest path first)
 ospf_config = [
     'router ospf 1',
     'network 1.1.1.1 0.0.0.0 area 0',
