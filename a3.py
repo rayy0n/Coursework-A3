@@ -19,7 +19,7 @@ net_connect.enable()
 # Configure loopback interface
 loopback_config = [
     'interface loopback0',
-    'ip address 1.1.1.1 255.255.255.255',
+    'ip address 192.168.4.1 255.255.255.255',
     'exit',
 ]
 
@@ -37,9 +37,8 @@ net_connect.send_config_set(interface_config)
 
 # Configure OSPF (open shortest path first)
 ospf_config = [
-    'router ospf 1',
-    'network 1.1.1.1 0.0.0.0 area 0',
-    'network 192.168.2.0 0.0.0.255 area 0',
+    'router csr100v',
+    'network 192.168.56.1 0.0.0.0 area 0',
     'exit',
 ]
 
